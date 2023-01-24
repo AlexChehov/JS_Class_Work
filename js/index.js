@@ -90,3 +90,63 @@
 // console.log(data1);
 
 
+// const person = {
+//     name12:"Alex",
+//     age:10,
+//     email:"emaill@gmail.com"
+// };
+// const { name12 ,age ,email } = person;
+// console.log(name12,age,email);
+// Object.freeze(person);
+// delete person.age;
+// person.city = "Kiyv";
+// console.log(person, person.city);
+// console.log(Object.isFrozen(person));
+
+
+// const person1 = {
+//     personName: "Alex",
+//     age:20,
+//     SecName:"Filipov"
+// }
+// const person2 = {
+//     personName: "Oleg",
+//     age:22,
+//     SecName:"Frolov"
+// }
+// Object.freeze(person1);
+// delete person1.age;
+// person1.age = 30;
+// console.log(person1 , person2);
+
+// const object = {
+//     person1: {
+//       name: "Igor",
+//       age: 20
+//     },
+//     person2: {
+//       name: "Oleg",
+//       age: 50
+//     },
+//     person3: {
+//       name: "Alex",
+//       age: 40
+//     },
+//   };
+
+//   for (let key in object){
+//     console.log(object[key],'!');
+//     if(Object[key].age < 50){
+//         object.freeze(object[key]);
+//     } else {
+//         delete Object[key];
+//     }
+//   };
+// console.log(Object, 'final object');
+  
+// for (let el in object) {
+//     if (el['age'] < 50) Object.freeze(el);
+//     else delete el;
+//   }
+//   console.log(object);
+
