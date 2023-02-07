@@ -73,7 +73,7 @@
 // const[name1,name2,name3,name4] = arr11;
 // console.log(name1,name2,name3,name4,"names");
 
-const arr = [["1", "5", "7"], ["6", "9", "3"]];
+// const arr = [["1", "5", "7"], ["6", "9", "3"]];
 
 // let res = [];
 // arr.forEach((el) => {
@@ -83,7 +83,15 @@ const arr = [["1", "5", "7"], ["6", "9", "3"]];
 // });
 // console.log(res);
 
- const res = arr.map((arrElement) => {
-return arrElement.map((element) => +element);
-});
-console.log(res,"RES");
+// const res = arr.map((arrElement) => {
+//     return arrElement.map((element) => +element);
+// });
+// console.log(res, "RES");
+
+
+// const arr1212 = [1, 6, 9, "Text", [], [], {}, () => { }];
+// console.log(arr1212.some((el) => Array.isArray(el)));
+
+// const arr8 = [1, 6, 9, "Text", [1, 9], [], {}, () => {}];
+// console.log(arr8.some(el => Array.isArray(el) && el.length === 0))
+
