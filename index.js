@@ -21,11 +21,11 @@
 // console.log(arr3.sort((e1, e2) => e1.name.localeCompare(e2.name)));
 
 // function fn1 (
-   // arguments
-    // ) {
-        //  body
-        //return value
-    // }                         //functiondeclaration
+// arguments
+// ) {
+//  body
+//return value
+// }                         //functiondeclaration
 // const fn2 = function () [] ;
 
 // const helloFunction = function() {
@@ -46,4 +46,50 @@
 // const num1 = 100;
 // const num2 = 1000;
 // sum(num1,num2);
+
+// Написати функцію, що приймає сторони прямокутника та рахує та виводить його площу та переметр
+
+// const num1 = function (a, b) {
+//     alert( a*b )
+//     alert(( a+b ) * 2)
+// };
+// const up = 4;
+// const side = 7;
+// num1(up, side);
+
+//Написати функцію що приймає у аргументи name, surname, age та повертає 
+// object з одноіменними полями
+// {name: "Igor", surname: "Sergienko", age: 23}
+
+// function createPerson(name, surname, age) {
+//     return {
+//         name,
+//         surname,
+//         age
+//     };
+// }
+// const name = createPerson("Igor", "Sergienko", 23);
+// console.log(name);
+
+// Написати функцію яка створює машину за переданими параметрами name, price, color
+
+function createCar(name, price, color) {
+    return {
+        name,
+        price,
+        color,
+        discaunt: function () {
+            return (price - (price * 0.1));
+        },
+        newPrice: function (price2) {
+            return {name, color, price:price2};
+        }
+    };
+}
+const car = createCar("Ravon", 12000, "black");
+console.log(car.discaunt());
+console.log(car.newPrice(100000));
+
+
+
 
