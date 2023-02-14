@@ -67,3 +67,32 @@
 // }
 
 
+// function a (a) {
+//     return function (b) {
+//     return function (c) {}
+//     }
+// }
+
+// a(a)(b)(c);
+
+// (function main(text) { alert(text);
+// })("Hello");
+
+function Car(name, price, color) {
+    this.name = name;
+    this.price = price;
+    this.color = color;
+    this.showcar = function () {
+        console.log(this);
+    }
+    return this;
+}
+
+Car.prototype.show2 = function () {
+    console.log(this.name,"name");
+}
+
+const car1 = new Car("Ford", 50000, "green")
+console.log(car1);
+car1.showcar();
+car1.show2();
