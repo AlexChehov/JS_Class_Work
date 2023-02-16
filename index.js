@@ -115,7 +115,71 @@
 // }
 // fn((Halo) => console.log(Halo),"Hello Hallo");
 
-function fn (fn1,str) {
-    return fn1(str)
-}
-console.log(fn((riprip) => riprip.toUpperCase(),"Hello world"))
+// function fn (fn1,str) {
+//     return fn1(str)
+// }
+// console.log(fn((riprip) => riprip.toUpperCase(),"Hello world"));
+
+
+// Array.prototype.forEach2 = function (fn) {
+//     for (let i = 0; i < this.length; i = i + 1) {
+//         fn(this[i], i, this);
+//     }
+// }
+
+// const arr = [1,2,3,4,5];
+// arr.forEach2((e,i,arr) => console.log(e,i,arr) );
+
+// [1,2,3].map((e,i,arr) => e.toString());
+
+
+// const arr = [1,2,3,4,5];
+// Array.prototype.map2 = function (fn) {
+//     const result = [];
+//     for (let i = 0; i < this.length; i = i + 1) {
+//         const newElement = fn(this[i],i,arr);
+//         result.push(newElement);
+//     }
+//     return result;
+// };
+// console.log([1,2,3].map2((e,i,arr) => e.toString()));
+
+
+// Array.prototype.myReduce = function (fn) {
+//     var a = 0;
+//     for (let i = 0; i < this.length; i++) {
+//         fn(a = a + this[i])
+//     }
+//     return a;
+// }
+
+// const arr = [1, 2, 3, 4, 5];
+
+// const res = arr.myReduce((acc, i) => acc + i)
+// console.log(res);
+
+// function sum (fn1, fn2) {
+//     return fn1(10) + fn2(40);
+// }
+// console.log(sum ((fn1 = (a) => a), (fn2 = (b) => b)));
+
+// const arr = [1, 2, 3, 4, 5];
+
+// function reduce2(acc, e, i) {
+//     const a = acc + e;
+//     `acc: ${acc}, e: ${e}, i: ${i}, a: ${a}`;
+//     return a;
+// }
+
+// console.log(arr.reduce((acc, i) => acc+i));
+
+// console.log(     [1,2,3].reduce((acc,e,i,arr) => acc = acc + e , 0)      );
+
+Array.prototype.reduce2 = function (fn, acc = 0) {
+  
+    for (let i = 0; i < this.length; i = i + 1) {
+        acc = fn(acc, this[i], i, this);
+    }
+    return acc;
+};
+console.log([1, 2, 3].reduce2((acc, e,) => acc = acc + e));
