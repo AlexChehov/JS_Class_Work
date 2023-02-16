@@ -96,3 +96,26 @@
 // console.log(car1);
 // car1.showcar();
 // car1.show2();
+
+// функція вищого порядку
+
+// function fn (fn1) {
+//     fn1()
+// }
+// fn(() => console.log("Hello"));
+
+// function fn (fn1,message) {
+//     fn1(message)
+// }
+// fn((msg) => console.log(msg),"Hello world");
+
+
+// function fn (H1,auto) {
+//     H1(auto)
+// }
+// fn((Halo) => console.log(Halo),"Hello Hallo");
+
+function fn (fn1,str) {
+    return fn1(str)
+}
+console.log(fn((riprip) => riprip.toUpperCase(),"Hello world"))
