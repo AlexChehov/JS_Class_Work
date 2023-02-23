@@ -152,50 +152,50 @@
 // console.log(Ford.isFord({}),"isFord");
 // console.log(Array.isArray([]));
 
-class Cars {
-    constructor(name, age, color, mile) {
-        this.name = name;
-        this.age = age;
-        this.color = color;
-        this.mile = mile;
+// class Cars {
+//     constructor(name, age, color, mile) {
+//         this.name = name;
+//         this.age = age;
+//         this.color = color;
+//         this.mile = mile;
 
-        return this;
-    }
-    showInfo() {
-        console.log(`Hi, I am have a  ${this.name} she ${this.age} old ,
-        she ${this.color} and has ${this.mile} miles`);
-    }
-    getName() {
-        return this.name;
-    }
-    setName(NewName) {
-        return this.name = NewName;
-    }
-}
+//         return this;
+//     }
+//     showInfo() {
+//         console.log(`Hi, I am have a  ${this.name} she ${this.age} old ,
+//         she ${this.color} and has ${this.mile} miles`);
+//     }
+//     getName() {
+//         return this.name;
+//     }
+//     setName(NewName) {
+//         return this.name = NewName;
+//     }
+// }
 
-class Cars11 extends Cars {
-    constructor(name,age,coor,mile) {
-        super(name,age,coor,mile,wills)
-        this.wills = wills;
+// class Cars11 extends Cars {
+//     constructor(name,age,coor,mile) {
+//         super(name,age,coor,mile,wills)
+//         this.wills = wills;
 
-        return this;
-    }
-    
-    speedyRide() {
-        console.log(`I am riding speedyRide ${this.speed} km/uhr`)
-    }
-    setName(NewName) {
-        return this.name = NewName;
-    }
+//         return this;
+//     }
 
-}
+//     speedyRide() {
+//         console.log(`I am riding speedyRide ${this.speed} km/uhr`)
+//     }
+//     setName(NewName) {
+//         return this.name = NewName;
+//     }
+
+// }
 
 
-const Cars1 = new Cars("BMW", 1994, "Black", 350000);
-Cars1.showInfo();
-Cars1.setName("Ford");
-console.log(Cars1.getName());
-Cars1.showInfo();
+// const Cars1 = new Cars("BMW", 1994, "Black", 350000);
+// Cars1.showInfo();
+// Cars1.setName("Ford");
+// console.log(Cars1.getName());
+// Cars1.showInfo();
 
 
 
@@ -204,3 +204,23 @@ Cars1.showInfo();
 // Cars1.setName("Ford");
 // console.log(Cars1.getName());
 // Cars1.showInfo();
+
+
+class Person {
+
+    #age;
+
+    constructor(name, age) {
+        this.name = name;
+        this.#age = age;
+    }
+    get name() {
+        return this.name;
+    }
+    set name(NewName) {
+        return this.name = NewName;
+    }
+}
+const person = new Person("Alex", 28)
+console.log(person);
+console.log(person.name, "person");
