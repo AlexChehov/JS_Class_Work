@@ -214,12 +214,14 @@ class Person {
         this.name = name;
         this.#age = age;
     }
-    get name() {
-        return this.name;
-    }
-    set name(NewName) {
-        return this.name = NewName;
-    }
+    // get name() {
+    //     return this.name;
+    // }
+    // set name(NewName) {
+    //     return this.name = NewName;
+    // }
+
+    get age    
 }
 const person = new Person("Alex", 28)
 console.log(person);
