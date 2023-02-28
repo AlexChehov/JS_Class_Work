@@ -1,99 +1,65 @@
-// class Person {
-
-//     #age = Date.now();
-
-//     constructor(name) {
-//         this.name = name;
-//     }
-
-//     getDate(date) {
-//         return date - this.#age;
-//     }
-
-//     get age() {
-//         return this.#age;
-//     }
-
-//     set age(newAge) {
-//         this.#age = newAge;
-//     }
-
-// }
-
-// const person = new Person("Igor", 23);
-
-// //
-// person.age = 100; //setter
-// person.age //getter
-
-// person.name = "Oleg";
-
-// console.log(person, "person");
-
-// console.log(Person.prototype,"prototipe");
-
-// Person.prototype.showinfo = function () {
-//     console.log(this);
-// }
-// person.showinfo();
+// Document Object Model - DOM
 
 
-// class Cars {
-//     #color
-//     constructor(model, price) {
-//         this.model = model;
-//         this.price = price;
+// const h1 = document.getElementById("h1");
+// console.log(h1);
+// h1.textContent = "Hello world";
 
-//     }
-//     get color () {
-//         return this.#color
-//     }
-//     set color (newColor) {
-//         return this.#color = newColor
-//     }
+
+// const spans = document.getElementsByTagName("span");
+// console.log(spans);
+
+// const spansWithNames = document.getElementsByName("span");
+// [...spansWithNames].forEach((el) => el.style.color = "red");
+
+
+// [...spans].forEach((el,i) => {
+// el.textContent = i;
+// });
+
+// const allElements = [...document.querySelectorAll("*")];
+// allElements.forEach((el) => el.style.fontSize = "50px");
+
+
+// let counter = 0;
+
+// const button = document.createElement("button");
+// button.textContent = "Button";
+// document.body.appendChild(button);
+
+// button.onclick = () => {
+//     counter = counter + 1;
+//     h1.textContent = counter;
 // };
 
-// const cars = new Cars("Dodge", 15000)
-// cars.color = "Red"
-// console.log(cars)
 
+// const button2 = document.createElement("button2");
+// button2.textContent = "Button2";
+// document.body.appendChild(button2);
 
-// class Rar {
-//     #sector
-//     constructor(sector) {
-//         this.sector = sector;
+// button2.onclick = () => {
+//     counter = counter - 1;
+//     h1.textContent = counter;
+// };
 
-//     }
-//     get sector() {
-//         return this.#sector;
-//     }
+const h1 = document.querySelector("h1");
+const incrementButton = document.querySelector("#increment");
+const decrementButton = document.querySelector("#decrement");
+const resetButton = document.querySelector("#reset");
 
-//     set sector(newSector) {
-//         this.#sector = newSector;
-//     }
-// }
-// const rar = new Rar("Selector", 23000);
-// rar.sector = "SectoR";
-// console.log(rar);
+let counter = 0;
 
-// Rar.prototype.showinfo = function () {
-//     console.log(this);
-// }
-// rar.showinfo();
-
-
-
-// 2. Створити аналог класу Object з доданим методом copy. 
-// Метод має повертати нову незалежну копію вашого object
-
-
-class SuperObject extends Object {
-    constructor (arr) {
-        super(arr);
-    }
-    copyInfo () {
-        return{...this}
-    }
+incrementButton.onclick = () => {
+    counter = counter + 1;
+    h1.textContent = counter;
 }
 
-console.log(arr);
+decrementButton.onclick = () => {
+    counter = counter - 1;
+    h1.textContent = counter;
+}
+
+resetButton.onclick = () => {
+    counter = 0
+    h1.textContent = counter;
+}
