@@ -68,23 +68,23 @@
 //     document.body.style.background = `rgb(${counter * 10}, 
 //     ${counter * 10}, ${counter * 10})`;
 // };
-const addSqeridButton = document.getElementById("addSqerid");
+// const addSqeridButton = document.getElementById("addSqerid");
 
-class Square {
-    constructor(size, color) {
-        this.size = size;
-        this.color = color;
-        this.element = document.createElement("div");
-        this.element.style.width = this.size + "px";
-        this.element.style.height = this.size + "px";
-        this.element.style.background = this.color;
-    }
-    render (htmlElement) {
-        htmlElement.appendChild(this.element);
-    }
-};
+// class Square {
+//     constructor(size, color) {
+//         this.size = size;
+//         this.color = color;
+//         this.element = document.createElement("div");
+//         this.element.style.width = this.size + "px";
+//         this.element.style.height = this.size + "px";
+//         this.element.style.background = this.color;
+//     }
+//     render (htmlElement) {
+//         htmlElement.appendChild(this.element);
+//     }
+// };
 
-addSqeridButton.onclick = () => {
-const square = new Square(100, "black");
-square.render(document.body);
-}
+// addSqeridButton.onclick = () => {
+// const square = new Square(100, "black");
+// square.render(document.body);
+// }
