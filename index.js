@@ -42,24 +42,49 @@
 //     h1.textContent = counter;
 // };
 
-const h1 = document.querySelector("h1");
-const incrementButton = document.querySelector("#increment");
-const decrementButton = document.querySelector("#decrement");
-const resetButton = document.querySelector("#reset");
+// const h1 = document.querySelector("h1");
+// const incrementButton = document.querySelector("#increment");
+// const decrementButton = document.querySelector("#decrement");
+// const resetButton = document.querySelector("#reset");
 
-let counter = 0;
+// let counter = 0;
 
-incrementButton.onclick = () => {
-    counter = counter + 1;
-    h1.textContent = counter;
-}
+// incrementButton.onclick = () => {
+//     counter = counter + 1;
+//     h1.textContent = counter;
+// }
 
-decrementButton.onclick = () => {
-    counter = counter - 1;
-    h1.textContent = counter;
-}
+// decrementButton.onclick = () => {
+//     counter = counter - 1;
+//     h1.textContent = counter;
+// }
 
-resetButton.onclick = () => {
-    counter = 0
-    h1.textContent = counter;
+// resetButton.onclick = () => {
+//     counter = 0
+//     h1.textContent = counter;
+// }
+
+// const interseptcounter = () => {
+//     document.body.style.background = `rgb(${counter * 10}, 
+//     ${counter * 10}, ${counter * 10})`;
+// };
+const addSqeridButton = document.getElementById("addSqerid");
+
+class Square {
+    constructor(size, color) {
+        this.size = size;
+        this.color = color;
+        this.element = document.createElement("div");
+        this.element.style.width = this.size + "px";
+        this.element.style.height = this.size + "px";
+        this.element.style.background = this.color;
+    }
+    render (htmlElement) {
+        htmlElement.appendChild(this.element);
+    }
+};
+
+addSqeridButton.onclick = () => {
+const square = new Square(100, "black");
+square.render(document.body);
 }
