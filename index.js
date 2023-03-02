@@ -19,13 +19,19 @@ const ageInput = document.querySelector("#age");
 const createButton = document.querySelector("#create");
 const userSection = document.querySelector("#users-section");
 
-const users = [];
+let users = [];
+
+const deleteUser = (indexofusers) => {
+    users =users.filter((el,i) => i !== indexofusers);
+    renderUsers();
+ };
 
 const renderUsers = () => {
     userSection.innerHTML = "";
-    const UsersContent = users.map((user) => `<div>
+    const UsersContent = users.map((user) => `<div class="usersCard">
     <p>${user.name}</p>
     <span>${user.age}</span>
+    <button class="delete-user-button">Delete</button>
     </div>`);
     console.log(UsersContent);
 
@@ -33,7 +39,18 @@ const renderUsers = () => {
     UsersContent.forEach((userLayout) => {
         userSection.innerHTML += userLayout;
     });
-}
+    const deleteButtons = [...document.querySelectorAll(".delete-user-button")];
+
+    deleteButtons.forEach((button,index) => {
+        button.onclick = () => deleteUser(index);
+    });
+};
+
+// const deleteUser = () => {
+//     deleteButtons.forEach((button) => {
+//         button.onclick = () => deleteUser();
+//     });
+// };
 
 createButton.onclick = () => {
     const name = nameInput.value;
@@ -47,4 +64,4 @@ createButton.onclick = () => {
     ageInput.value = "";
 
     renderUsers();
-}
+};
