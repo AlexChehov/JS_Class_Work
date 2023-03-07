@@ -39,6 +39,8 @@ function renderUsers (usersToRender) {
 };
 
 
+
+
 createButton.onclick = () => {
     const name = nameInput.value;
     const age = +ageInput.value;
