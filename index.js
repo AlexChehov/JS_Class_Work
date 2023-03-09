@@ -37,6 +37,7 @@ const sorting = {
        usersCopy.sort((user1, user2) => user1.name.localeCompare(user2.name));
        renderUsers(usersCopy);
     }
+    
 };
 
 function renderUsers(usersToRender) {
@@ -115,3 +116,11 @@ sortingByNameCheckbox.onchange = (event) => {
         renderUsers(users);
     }
 }
+
+sortingByAgeCheckbox.onchange = (event) => {
+    if (event.target.checked) {
+        sorting.names();
+    } else {
+        renderUsers(users);
+    }
+};
