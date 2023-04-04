@@ -166,6 +166,8 @@ clearCurrentUserButton.disabled = true;
 clearCurrentUserButton.onclick = () => {
   currentUser = undefined;
   clearCurrentUserButton.disabled = true;
+  const userButtons = [...document.querySelectorAll(".user-todos-button")];
+  userButtons.forEach((btn) => btn.classList.remove("active-user-button"));
   renderTodos(todos);
 };
 
