@@ -4,6 +4,7 @@ const output = document.querySelector("#output");
 const usersOutput = document.querySelector("#users-output");
 const clearCurrentUserButton = document.querySelector("#clear-current-user");
 const searchTodoInput = document.querySelector("#todo-search");
+const scrollTopButton = document.querySelector("#scroll-top-button")
 
 const isLocalStorageTodosExists = localStorage.getItem("todos");
 
@@ -171,4 +172,8 @@ clearCurrentUserButton.onclick = () => {
 searchTodoInput.oninput = () => {
   console.log(searchTodoInput.value);
   searchTodo(searchTodoInput.value);
+};
+
+scrollTopButton.onclick = () => {
+  window.scrollTo({top: 0, behavior: "smooth"});
 };
